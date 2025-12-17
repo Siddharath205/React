@@ -1,4 +1,5 @@
 import React from 'react'
+import { IoMenu } from "react-icons/io5";
 
 function Header() {
   return (
@@ -14,6 +15,7 @@ function Header() {
             <button className='text-3xl  font-semibold italic text-teal-600 '>Login</button>
             <button>Sign up</button>
         </div>
+        <IoMenu />
     </div>
   )
 }
