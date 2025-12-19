@@ -1,14 +1,16 @@
 import React from 'react'
 import { IoMdMenu } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
 function Header() {
+  const navigate = useNavigate();
   return (
     <div className='bg-[#a3d154] flex justify-between items-center p-4'>
         <img src="/vite.svg" alt=""width={20} height={20} />
         <ul  className='hidden md:flex space-x-4'>
-            <li>home</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>Blog</li>
+            <li onClick={() => navigate('/')}>home</li>
+            <li onClick={() => navigate('/about')}>About</li>
+            <li onClick={() => navigate('/contact')}>Contact</li>
+            <li onClick={() => navigate('/blog')}>Blog</li>
         </ul>
         <div className='hidden md:flex space-x-4'>
             <button className='text-3xl  font-semibold italic text-teal-600 '>Login</button>
